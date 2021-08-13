@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Beatmaker</title>
+  </head>
+  <body>
+    <div class="sequencer">
+      <div class="kick-track">
+        <div class="control">
+          <h1>Kick</h1>
+          <button data-track="0" class="mute kick-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+            class="kick-vol-bar vol-slider"
+          />
+          <span>100%</span>
+
+          <select name="kick-select" id="kick-select">
+            <option value="allSounds/kick-classic.wav">Classic Kick</option>
+            <option value="allSounds/kick-808.wav">808 Kick</option>
+            <option value="allSounds/kick-heavy.wav">Heavy Kick</option>
+          </select>
+        </div>
+        <div class="kick">
+          <div class="pad kick-pad b0"></div>
+          <div class="pad kick-pad b1"></div>
+          <div class="pad kick-pad b2"></div>
+          <div class="pad kick-pad b3"></div>
+          <div class="pad kick-pad b4"></div>
+          <div class="pad kick-pad b5"></div>
+          <div class="pad kick-pad b6"></div>
+          <div class="pad kick-pad b7"></div>
+        </div>
+      </div>
+      <div class="snare-track">
+        <div class="control">
+          <h1>Snare</h1>
+          <button data-track="1" class="mute snare-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+            class="snare-vol-bar vol-slider"
+          />
+          <span>100%</span>
+
+          <select name="snare-select" id="snare-select">
+            <option value="allSounds/snare-acoustic01.wav">
+              Acoustic Snare
+            </option>
+            <option value="allSounds/snare-808.wav">808 Snare</option>
+            <option value="allSounds/snare-vinyl02.wav">Vinyl Snare</option>
+          </select>
+        </div>
+        <div class="snare">
+          <div class="pad snare-pad b0"></div>
+          <div class="pad snare-pad b1"></div>
+          <div class="pad snare-pad b2"></div>
+          <div class="pad snare-pad b3"></div>
+          <div class="pad snare-pad b4"></div>
+          <div class="pad snare-pad b5"></div>
+          <div class="pad snare-pad b6"></div>
+          <div class="pad snare-pad b7"></div>
+        </div>
+      </div>
+      <div class="hihat-track">
+        <div class="control">
+          <h1>Hihat</h1>
+          <button data-track="2" class="mute hihat-volume">
+            <i class="fas fa-volume-up"></i>
+          </button>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+            class="hihat-vol-bar vol-slider"
+          />
+          <span>100%</span>
+
+          <select name="hihat-select" id="hihat-select">
+            <option value="allSounds/hihat-acoustic01.wav">
+              Hihat Acoustic
+            </option>
+            <option value="allSounds/hihat-808.wav">808 Hihat</option>
+          </select>
+        </div>
+        <div class="hihat">
+          <div class="pad hihat-pad b0"></div>
+          <div class="pad hihat-pad b1"></div>
+          <div class="pad hihat-pad b2"></div>
+          <div class="pad hihat-pad b3"></div>
+          <div class="pad hihat-pad b4"></div>
+          <div class="pad hihat-pad b5"></div>
+          <div class="pad hihat-pad b6"></div>
+          <div class="pad hihat-pad b7"></div>
+        </div>
+      </div>
+      <div class="bottom">
+        <i class="fas fa-save"></i>
+        <button class="save">Save Pattern</button>
+        <button class="play">Play</button>
+        <button class="clear-all">Clear All</button>
+        <input
+          type="range"
+          value="150"
+          max="300"
+          min="0"
+          class="tempo-slider"
+        />
+        <p>Tempo: <span class="tempo">150</span></p>
+      </div>
+      <div class="save-div">
+        <div class="pattern"></div>
+      </div>
+    </div>
+    <audio src="allSounds/kick-classic.wav" class="kick-sound"></audio>
+    <audio src="allSounds/snare-acoustic01.wav" class="snare-sound"></audio>
+    <audio src="allSounds/hihat-acoustic01.wav" class="hihat-sound"></audio>
+    <script src="app.js"></script>
+  </body>
+</html>
